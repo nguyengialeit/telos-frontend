@@ -1,22 +1,23 @@
-Tiền đề: bạn đã cài đặt NodeJS thành công trên máy tính. Để kiểm tra là đã cài đặt thành công NodeJS, bạn vào terminal, gõ `npm -v` nhấn enter, và `npx -v` nhấn enter, nếu ra được số version thì đã thành công, nếu bị báo lỗi thì comment bên dưới.
+Tiền đề: bạn đã cài đặt NodeJS và. Npm thành công trên máy tính.  
+Để kiểm tra là đã cài đặt thành công NodeJS, bạn vào terminal, gõ `node -version` nhấn enter, nếu ra được số version thì đã thành công.  
+Để kiểm tra là đã cài đặt thành công. Npm, bạn vào terminal, gõ `npm -version` nhấn enter, nếu ra được số version thì đã thành công.  
 
 ## 1. Cài đặt
 
-Trong terminal, di chuyển đến thư mục cần cài đặt bằng cách gõ lệnh `cd đường_dẫn_đến thư mục cần cài đặt>`, sau đó gõ:
+(Ban có thể bỏ qua bước này nếu terminal đang đứng ở project hiện tại) Trong terminal, di chuyển đến thư mục cần cài đặt bằng cách gõ lệnh `cd đường_dẫn_đến thư mục cần cài đặt>`.  
+Tiếp theo gõ lệnh:
 
 `npm init -y`
 
-`npm install -D tailwindcss@latest postcss@latest autoprefixer@latest`
-
-Nếu bạn thấy trong thư mục có thư mục node_modules & file packages.json thì đã thành công.
+Nếu bạn thấy trong thư mục có thư mục node_modules thì đã thành công.
 
 ## 2. Tạo file config
 
-`npx tailwindcss init -p`
+`npx tailwindcss init`
 
-Nếu bạn thấy trong thư mục có thêm 2 file `tailwind.config.js` và `postcss.config.js` thì đã thành công.
+Nếu bạn thấy trong thư mục có thêm file `tailwind.config.js` thì đã thành công.
 
-## 3. Tạo file src/style.css
+## 3. Tạo file style.css
 
 ```
 @tailwind base;
@@ -25,6 +26,7 @@ Nếu bạn thấy trong thư mục có thêm 2 file `tailwind.config.js` và `p
 ```
 
 ## 4. Ghi đè nội dung file package.json
+Nếu không có file này, bạn có thể tạo một file trống trên thư mục gốc, với tên là package.json, và copy nội dung dưới vào file.
 ```
 {
   "name": "tailwind",
@@ -32,23 +34,25 @@ Nếu bạn thấy trong thư mục có thêm 2 file `tailwind.config.js` và `p
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx tailwindcss --postcss -i ./src/style.css -o ./css/style.css",
-    "watch": "npx tailwindcss --postcss  -i ./src/style.css -o ./css/style.css --watch",
-    "build" : "NODE_ENV=production npx tailwindcss --postcss -i ./src/style.css -o ./css/style.css"
+    "dev": "npx tailwindcss -i ./style.css. -o ./css/output.css",
+    "watch": "npx tailwindcss  -i ./style.css -o ./css/output.css --watch",
+    "build" : "NODE_ENV=production npx tailwindcss -i ./style.css -o ./css/output.css"
   },
   "devDependencies": {
     "autoprefixer": "^10.3.4",
-    "postcss": "^8.3.6",
     "tailwindcss": "^3.0.0"
   }
 }
 ```
+Mục script với chức năng là tạo các shortcut cho npm. Ví dụ trên terminal gõ lệnh `npm run watch`, thì npm sẽ chạy lệnh `npx tailwindcss -i ./style.css -o ./css/output.css`.  
+Phần `-i ./style.css` trong mỗi lệnh tương ứng với việc chỉ định file input, ở đây là file style.css trên thư mục gốc.  
+Phần `-o ./css/output.css` trong mỗi lệnh tương ứng với việc chỉ định file output, ở đây là file output.css trên thư mục css.
 
 ## 5. Ghi đè nội dung file tailwind.config.js
 ```
 module.exports = {
   content: [
-    "**/*.html"
+    "./*.html"
   ],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
@@ -60,9 +64,22 @@ module.exports = {
   plugins: [],
 }
 ```
+Nội dung mục content sẽ chỉ định đường dẫn đến file html của bạn, đường dẫn này cần chính xác để tailwind có thể hiểu được.  
+Như ví dụ trên, `./` đại diện cho thư mục gốc, `*.html` là tất cả các file với đuôi html.
 
 ## 6. Dịch file
 
 `npm run watch`
 
-Giữ cho lệnh này chạy, không tắt terminal
+Lệnh này được config ở mục 4.  
+Luôn giữ cho lệnh này chạy, không tắt terminal
+
+## 7. Link css vào html
+Bạn có thể link file vào như một file css bình thường.  
+Trong thẻ head của file html, thêm:  
+```
+<link href="./css/output.css" rel="stylesheet" />
+```
+Chú ý link file css đã qua xử lý, như config ở phần 4, file css sẽ là file ./css/output.css
+
+
