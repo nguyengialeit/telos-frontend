@@ -114,6 +114,7 @@ Trong thẻ head của file html, thêm:
 ```
 <link href="./css/output.css" rel="stylesheet" />
 ```
-Chú ý link file css đã qua xử lý, như config ở phần 4, file css sẽ là file ./css/output.css
+Chú ý link file css đã qua xử lý, không link file css bạn đã viết.  
+Theo ví dụ về config ở phần 4, file css đã qua xử lý sẽ là file ./css/output.css
 
 
