@@ -67,6 +67,40 @@ module.exports = {
 Nội dung mục content sẽ chỉ định đường dẫn đến file html của bạn, đường dẫn này cần chính xác để tailwind có thể hiểu được.  
 Như ví dụ trên, `./` đại diện cho thư mục gốc, `*.html` là tất cả các file với đuôi html.
 
+Đây cũng là nơi để bạn có thể thêm các giá trị tương ứng như màu sắc, font-size cho khớp với design system, ví dụ:
+```
+module.exports = {
+  content: [
+    "./*.html"
+  ],
+  theme: {
+    extend: {
+      colors: {
+        "cool-gray": {
+          900: "#111827",
+        },
+        gray: {
+          100: "#F4F5F7",
+          900: "#18191F"
+        },
+        purple: {
+          400: "#8C30F5",
+        }
+      },
+      fontSize: {
+        h1: ["72px", "98px"],
+        h2: ["48px", "64px"],
+        lead1: ["18px", "32px"],
+        subtitle2: ["18px", "28px"],
+      },
+      fontFamily: {
+        inter: "Inter",
+      }
+    },
+  },
+  plugins: [],
+}
+```
 ## 6. Dịch file
 
 `npm run watch`
