@@ -1,0 +1,62 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.item {
+  flex: calc(25% - 32px);
+  display: flex;
+  flex-direction: column;
+}
+
+.item img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.item div {
+  margin-top: 8px;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.nav {
+  flex: 1;
+  margin: 22px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.navItem {
+  margin-left: 32px;
+}
+
+.menu {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .item {
+    flex: calc(50% - 32px);
+  }
+  .menu {
+    display: block;
+  }
+  .navItem {
+    display: none;
+  }
+}
+
+@media screen and  (max-width: 640px) {
+  .item {
+    flex: 100%;
+  }
+}

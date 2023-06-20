@@ -1,0 +1,9 @@
+.item {
+  flex: calc(50% - 32px);
+}
+.menu {
+  display: block;
+}
+.navItem {
+  display: none;
+}

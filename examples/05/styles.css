@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.title {
+  animation-duration: 1000ms;
+  animation-name: slideInFromRight;
+  animation-fill-mode: forwards;
+}
+
+.child {
+  opacity: 0;
+}
+
+.child:first-child {
+  animation-duration: 1000ms;
+  animation-delay: 200ms;
+  animation-name: slideInFromLeft;
+  animation-fill-mode: forwards;
+}
+
+.child:nth-child(2) {
+  animation-duration: 1000ms;
+  animation-delay: 400ms;
+  animation-name: slideInFromLeft;
+  animation-fill-mode: forwards;
+}
+
+.child:last-child {
+  animation-duration: 1000ms;
+  animation-delay: 500ms;
+  animation-name: slideInFromLeft;
+  animation-fill-mode: forwards;
+}
+
+button:hover {
+  animation-duration: 1s;
+  animation-name: scale;
+  animation-iteration-count: infinite;
+}
+
+.coverWrapper img:hover {
+  animation-duration: 0.5s;
+  animation-name: scaleIn;
+  animation-fill-mode: forwards;
+}
+
+.coverWrapper img {
+  animation-duration: 0.2s;
+  animation-name: scaleOut;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(120%);
+  }
+}
+
+@keyframes scaleOut {
+  0% {
+    transform: scale(120%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+
+
+.nav {
+  flex: 1;
+  margin: 22px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.navItem {
+  margin-left: 32px;
+}

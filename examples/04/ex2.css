@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.nav {
+  flex: 1;
+  margin: 22px 5%;
+  display: flex;
+  align-items: center;
+}
+
+.nav img:last-child {
+  width: 32px;
+  height: 32px;
+  margin-left: 32px;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.navItem {
+  margin-left: 32px;
+}

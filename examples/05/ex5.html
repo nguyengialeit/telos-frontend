@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link href="output.css" rel="stylesheet" />
+    <script src="script.js"></script>
+
+    <link rel="stylesheet" href="animate.css" />
+    <script src="wow.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+  </head>
+  <body>
+    <div class="w-full flex justify-center">
+      <div class="container">
+        <div class="nav">
+          <img class="logo" src="images/logo.png" />
+          <div class="navItem hidden lg:block">About</div>
+          <div class="navItem hidden lg:block">Service</div>
+          <div class="navItem hidden lg:block">Blogs</div>
+          <div class="navItem hidden lg:block">Jobs</div>
+          <div class="navItem hidden lg:block">Contact</div>
+          <img
+            class="menu block lg:hidden cursor-pointer"
+            src="images/ico_hamburger.webp"
+            width="32"
+            height="32"
+            onclick="openMenu()"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="w-screen h-screen bg-[#000000cc] absolute right-0 top-0 justify-end z-30 hidden"
+      id="mobileMenu"
+    >
+      <ul class="flex flex-col items-end w-52 h-screen bg-white text-black p-8">
+        <img
+          src="images/ico_hamburger.webp"
+          width="32"
+          height="32"
+          class="mb-4 cursor-pointer"
+          onclick="closeMenu()"
+        />
+        <li class="text-h6">About</li>
+        <li class="text-h6">Service</li>
+        <li class="text-h6">Blogs</li>
+        <li class="text-h6">Jobs</li>
+        <li class="text-h6">Contact</li>
+      </ul>
+    </div>
+    <div class="w-full flex justify-center">
+      <div class="container">
+        <div class="flex my-16">
+          <div class="flex flex-col gap-5 w-[540px] coverWrapper">
+            <div class="flex gap-5 items-end">
+              <img src="images/cover_1.png" alt="" class="w-full" />
+              <img src="images/cover_2.png" alt="" class="w-full" />
+            </div>
+            <div class="flex gap-5 items-start">
+              <img src="images/cover_3.png" alt="" class="w-full" />
+              <img src="images/cover_4.png" alt="" class="w-full" />
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-12">
+            <div
+              class="text-h3 font-extrabold animate__animated animate__tada"
+              id="title"
+            >
+              Headline
+            </div>
+            <div class="text-lead1 mt-4">
+              Specially developed to help restore a more youthful appearance
+              with improved radiance and bounce.
+            </div>
+            <div class="flex gap-3 mt-10 child1">
+              <div class="w-16 h-16 flex justify-center items-center">
+                <img src="images/ico_1.png" alt="" class="w-8 h-8" />
+              </div>
+              <div class="flex flex-col">
+                <div class="text-h6 font-medium">Headline</div>
+                <div class="text-body1">One line description</div>
+              </div>
+            </div>
+            <div class="flex gap-3 mt-6 child2">
+              <div class="w-16 h-16 flex justify-center items-center">
+                <img src="images/ico_2.png" alt="" class="w-8 h-8" />
+              </div>
+              <div class="flex flex-col">
+                <div class="text-h6 font-medium">Headline</div>
+                <div class="text-body1">One line description</div>
+              </div>
+            </div>
+            <button
+              class="bg-purple-400 text-white w-24 h-10 rounded-lg mt-10 text-label font-medium animate-bounce"
+              onclick="changeTitleStyle()"
+            >
+              Buy now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full bg-black flex justify-center text-gray-300">
+      <div class="container py-16">
+        <div class="grid grid-cols-4">
+          <div class="flex flex-col gap-3">
+            <div class="text-white text-subtitle2 font-medium">Product</div>
+            <div>Overview</div>
+            <div>Features</div>
+            <div>Tutorials</div>
+            <div>Pricing</div>
+            <div>Releases</div>
+          </div>
+          <div class="flex flex-col gap-3">
+            <div class="text-white text-subtitle2 font-medium">Company</div>
+            <div>About</div>
+            <div>Press</div>
+            <div>Careers</div>
+            <div>Contact</div>
+            <div>Partners</div>
+          </div>
+          <div class="flex flex-col gap-3">
+            <div class="text-white text-subtitle2 font-medium">Legal</div>
+            <div>Cookies Policy</div>
+            <div>Privacy Policy</div>
+            <div>Terms of Service</div>
+            <div>Law Enforcement</div>
+            <div>Status</div>
+          </div>
+          <div class="flex flex-col gap-3">
+            <div class="text-white text-subtitle2 font-medium">Follow us</div>
+            <div>Facebook</div>
+            <div>Twitter</div>
+            <div>Dribble</div>
+            <div>Instagram</div>
+            <div>LinkedIn</div>
+          </div>
+        </div>
+        <div class="flex justify-center relative mt-14">
+          <div class="w-[160px] h-12 bg-black flex justify-center z-10">
+            <img src="images/ico.png" alt="" class="animate-spin" />
+          </div>
+          <div class="w-full h-[1px] bg-white absolute top-1/2"></div>
+        </div>
+        <div class="text-center mt-8 text-body2 wow slideInLeft">
+          © 2020 Landify UI Kit. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
