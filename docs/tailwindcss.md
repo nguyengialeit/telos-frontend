@@ -9,7 +9,7 @@ Tiếp theo gõ lệnh:
 
 `npm init -y`
 
-Nếu bạn thấy trong thư mục có thư mục node_modules thì đã thành công.
+Nếu bạn thấy trong thư mục có file `package.json` thì đã thành công.
 
 ## 2. Tạo file config
 
