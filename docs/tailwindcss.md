@@ -6,7 +6,7 @@ Tiền đề:
 
 ## 1. Cài đặt
 
-(Ban có thể bỏ qua bước này nếu terminal đang đứng ở project hiện tại) Trong terminal, di chuyển đến thư mục cần cài đặt bằng cách gõ lệnh `cd đường_dẫn_đến thư mục cần cài đặt>`.  
+(Ban có thể bỏ qua bước này nếu terminal đang đứng ở project hiện tại) Trong terminal, di chuyển đến thư mục cần cài đặt bằng cách gõ lệnh `cd <đường_dẫn_đến thư mục cần cài đặt>`.  
 Tiếp theo gõ lệnh:
 
 `npm init -y`
