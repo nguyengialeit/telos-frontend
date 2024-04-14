@@ -5,9 +5,10 @@ Tiền đề:
 Để kiểm tra là đã cài đặt thành công Npm, bạn vào Terminal (Mac) hoặc Command prompt (Windows), gõ `npm -version` nhấn enter, nếu ra được số version thì đã thành công.    
 
 ## 1. Cài đặt
+Mở Visual studio code, bật cửa sổ terminal.
+(Ban có thể bỏ qua bước này nếu terminal đang đứng ở project hiện tại) Trong terminal, di chuyển đến thư mục project cần cài đặt bằng cách ấn chuột phải vào folder (project) mình muốn cài đặt tailwwind css, chọn "Open in integrated terminal".  
 
-(Ban có thể bỏ qua bước này nếu terminal đang đứng ở project hiện tại) Trong terminal, di chuyển đến thư mục cần cài đặt bằng cách gõ lệnh `cd <đường_dẫn_đến thư mục cần cài đặt>`.  
-Tiếp theo gõ lệnh:
+Trên terminal (cần xác nhận terminal đang đứng ở project hiện tại), gõ lệnh:
 
 `npm init -y`
 
