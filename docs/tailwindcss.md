@@ -20,7 +20,7 @@ Nếu bạn thấy trong thư mục có file `package.json` thì đã thành cô
 
 Nếu bạn thấy trong thư mục có thêm file `tailwind.config.js` thì đã thành công.
 
-## 3. Tạo file style.css
+## 3. Tạo file input.css
 
 ```
 @tailwind base;
@@ -37,9 +37,9 @@ Nếu không có file này, bạn có thể tạo một file trống trên thư 
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx tailwindcss -i ./style.css. -o ./css/output.css",
-    "watch": "npx tailwindcss  -i ./style.css -o ./css/output.css --watch",
-    "build" : "NODE_ENV=production npx tailwindcss -i ./style.css -o ./css/output.css"
+    "dev": "npx tailwindcss -i ./input.css. -o ./css/output.css",
+    "watch": "npx tailwindcss  -i ./input.css -o ./css/output.css --watch",
+    "build" : "NODE_ENV=production npx tailwindcss -i ./input.css -o ./css/output.css"
   },
   "devDependencies": {
     "autoprefixer": "^10.3.4",
@@ -47,8 +47,8 @@ Nếu không có file này, bạn có thể tạo một file trống trên thư 
   }
 }
 ```
-Mục script với chức năng là tạo các shortcut cho npm. Ví dụ trên terminal gõ lệnh `npm run watch`, thì npm sẽ chạy lệnh `npx tailwindcss -i ./style.css -o ./css/output.css`.  
-Phần `-i ./style.css` trong mỗi lệnh tương ứng với việc chỉ định file input, ở đây là file style.css trên thư mục gốc.  
+Mục script với chức năng là tạo các shortcut cho npm. Ví dụ trên terminal gõ lệnh `npm run watch`, thì npm sẽ chạy lệnh `npx tailwindcss -i ./input.css -o ./css/output.css`.  
+Phần `-i ./input.css` trong mỗi lệnh tương ứng với việc chỉ định file input, ở đây là file input.css trên thư mục gốc.  
 Phần `-o ./css/output.css` trong mỗi lệnh tương ứng với việc chỉ định file output, ở đây là file output.css trên thư mục css.
 
 ## 5. Ghi đè nội dung file tailwind.config.js
