@@ -1,5 +1,5 @@
 Tiền đề:  
--Bạn cần cài đặt NodeJs, tuỳ hệ điều hành các bạn đang dùng mà lựa chọn phiên bản phù hợp: [https://nodejs.org/en/download  ](https://nodejs.org/en/download/prebuilt-installer)
+-Bạn cần cài đặt NodeJs, tuỳ hệ điều hành các bạn đang dùng mà lựa chọn phiên bản phù hợp: [https://nodejs.org/en/download  ](https://nodejs.org/en/download/prebuilt-installer)  
 -Sau khi cài đặt NodeJs, bạn cần cài đặt thêm Npm, bạn vào Terminal (Mac) hoặc Powershell (Windows), gõ lệnh `npm install -g npm` -> Enter để bắt đầu cài đặt Npm.  
 Để kiểm tra là đã cài đặt thành công NodeJS, bạn vào Terminal (Mac) hoặc Powershell (Windows), gõ `node --version` nhấn enter, nếu ra được số version thì đã thành công.    
 Để kiểm tra là đã cài đặt thành công Npm, bạn vào Terminal (Mac) hoặc Powershell (Windows), gõ `npm -version` nhấn enter, nếu ra được số version thì đã thành công.    
