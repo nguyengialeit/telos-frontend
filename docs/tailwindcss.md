@@ -39,7 +39,6 @@ Nếu không có file này, bạn có thể tạo một file trống trên thư 
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx tailwindcss -i ./input.css -o ./css/output.css",
     "watch": "npx tailwindcss  -i ./input.css -o ./css/output.css --watch",
     "build" : "NODE_ENV=production npx tailwindcss -i ./input.css -o ./css/output.css"
   },
