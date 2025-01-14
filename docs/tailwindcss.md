@@ -15,7 +15,7 @@ Trên terminal (cần xác nhận terminal đang đứng ở project hiện tạ
 Nếu bạn thấy trong thư mục có file `package.json` thì đã thành công.
 
 ## 2. Tạo file config
-`npm install -D tailwindcss`
+`npm install -D tailwindcss`  
 Nếu bạn thấy trong file package.json, mucj devDependencies, có tailwindcss thì đã thành công.
 
 `npx tailwindcss init`
